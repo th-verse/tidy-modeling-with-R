@@ -1,25 +1,22 @@
 ---
-title: "tidymodels-with-r-presentetation"
+title: "Tidy Modeling With R"
 author: "Yan"
 format: revealjs
 editor: visual
 ---
 
-## Quarto
+## Introdução.
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+-   Este slide tem como objetivo apresentar o capítulo 1 do livro
 
-## Bullets
+-   desenvolver
 
-When you click the **Render** button a document will be generated that includes:
+-   desenvolver
 
--   Content authored with markdown
--   Output from executable code
+## Desenvolvimento
 
-## Code
+Explicar a trajetoria e desenvolvimento da leitura
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+## Resultados
 
-```{r}
-1 + 1
-```
+Explicar o que foi aprendido no final do capitulo

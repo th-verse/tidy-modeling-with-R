@@ -6,7 +6,7 @@
 <script src="apresentacao_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="apresentacao_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="apresentacao_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="apresentacao_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="apresentacao_files/libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.32">
 
   <meta name="author" content="Yan">
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="apresentacao_files/libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="apresentacao_files/libs/revealjs/dist/theme/quarto-091ebfb71d12db7fc524ec91495e1509.css">
   <link href="apresentacao_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="apresentacao_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="apresentacao_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -122,7 +122,7 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
@@ -148,11 +148,15 @@ Yan
 </section>
 <section id="desenvolvimento" class="slide level2">
 <h2>Desenvolvimento</h2>
-<p>Explicar a trajetoria e desenvolvimento da leitura</p>
-</section>
+<p>Gráfico de regressão linear ggplot2 comparando o cantar de duas especies de grilo. Utilizando …kkdesenvolver</p>
+
+<img data-src="images/clipboard-2993348226.png" class="quarto-figure quarto-figure-left r-stretch" width="328"></section>
 <section id="resultados" class="slide level2">
 <h2>Resultados</h2>
 <p>Explicar o que foi aprendido no final do capitulo</p>
+</section>
+<section id="referências" class="slide level2">
+<h2>Referências</h2>
 
 </section>
     </div>
@@ -370,6 +374,44 @@ Yan
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

@@ -3,6 +3,7 @@ title: "Tidy Modeling With R"
 author: "Yan"
 format: revealjs
 editor: visual
+theme: dark
 ---
 
 ## Introdução.
@@ -15,8 +16,16 @@ editor: visual
 
 ## Desenvolvimento
 
-Explicar a trajetoria e desenvolvimento da leitura
+Gráfico de regressão linear ggplot2 comparando o cantar de duas especies de grilo. Utilizando ...kkdesenvolver
+
+![](images/clipboard-2993348226.png){fig-align="left" width="328"}
 
 ## Resultados
 
 Explicar o que foi aprendido no final do capitulo
+
+## Referências
+
+```{r}
+
+```
